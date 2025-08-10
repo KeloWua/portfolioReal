@@ -1,0 +1,129 @@
+
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/*Header donde va el logo y el menu de navegacion*/
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 0.5rem;
+    margin: 0rem 2.5rem;
+}
+
+.nav-item{
+        display: inline-block;
+    font-size: 1.3rem;
+    padding: 0.5rem 1rem;
+    
+
+}
+
+.nav-item a {
+text-decoration: none;
+color: #333;
+}
+.nav-item a:hover {
+text-decoration: underline
+}
+
+
+
+
+/*Centro de la pagina*/
+.profile-image {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    margin: 2rem;
+    padding: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0;
+}
+
+main {
+    flex: 2;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+aside {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-right: 2rem;
+    text-align: center;
+    color: #656c72;
+    align-items: center;
+}
+
+/*Centro de la pagina estilos y size*/
+.about-me p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #333;
+}
+
+.projects {
+    margin-top: 2rem;
+}
+
+.projects-item {
+    list-style-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/right-arrow.svg);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.projects-item a {
+    text-decoration: none;
+    color: #2773c5;
+}
+.projects-item a:hover {
+    text-decoration: underline;
+}
+
+/*Skills section styles*/
+.skills {
+    margin-left: 2rem;
+}
+.skills-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.skills i {
+    font-size: 2rem;
+    color: #32363a;
+    margin-right: 0.5rem;
+
+}
+
+
+/*footer donde van los skills*/
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    background: linear-gradient(to top, #afafafc0, #f0f0f0);
+    color: #313131;;
+    position: fixed;
+    bottom: 0;
+}
