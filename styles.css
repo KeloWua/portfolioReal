@@ -2,11 +2,30 @@
 * {
     box-sizing: border-box;
 }
+
+:root {
+    --primary-color: #f0f0f0;
+    --secondary-color: #656c72;
+    --semi-secondary-color: #b3b8bd;
+    --third-color: #2d72c2;
+    --text-color: #333;
+
+}
+
+body.dark-mode {
+    --primary-color: #1e1e1e; 
+    --secondary-color: #999; 
+    --semi-secondary-color: #555;
+    --third-color: #70e9d9ec;
+    --text-color: #f5f5f5; 
+}
+
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: var(--primary-color);
+    color: var(--text-color);
 }
 
 /*Header donde va el logo y el menu de navegacion*/
@@ -30,7 +49,7 @@ header {
 
 .nav-item a {
 text-decoration: none;
-color: #333;
+color: var(--text-color);
 }
 .nav-item a:hover {
 text-decoration: underline
@@ -46,7 +65,7 @@ text-decoration: underline
     border-radius: 50%;
     margin: 2rem;
     padding: 0.5rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px var(--secondary-color);
 }
 
 .content {
@@ -70,7 +89,7 @@ aside {
     justify-content: flex-end;
     margin-right: 2rem;
     text-align: center;
-    color: #656c72;
+    color: var(--secondary-color);
     align-items: center;
 }
 
@@ -78,7 +97,7 @@ aside {
 .about-me p {
     font-size: 1.2rem;
     line-height: 1.5;
-    color: #333;
+    color: var(--text-color);
 }
 
 .projects {
@@ -93,7 +112,7 @@ aside {
 
 .projects-item a {
     text-decoration: none;
-    color: #2773c5;
+    color: var(--third-color);
 }
 .projects-item a:hover {
     text-decoration: underline;
@@ -110,7 +129,7 @@ aside {
 }
 .skills i {
     font-size: 2rem;
-    color: #32363a;
+    color: var(--text-color);
     margin-right: 0.5rem;
 
 }
@@ -122,8 +141,9 @@ footer {
     text-align: center;
     padding: 1rem;
     width: 100%;
-    background: linear-gradient(to top, #afafafc0, #f0f0f0);
-    color: #313131;;
+    background: linear-gradient(to top, var(--semi-secondary-color),  var(--primary-color) );
+    color: var(--text-color);;
+    text-shadow: var(--secondary-color) 0px 0px 1px;
     position: fixed;
     bottom: 0;
 }
@@ -145,9 +165,9 @@ label {
 }
 
 input, textarea {
-    border: 1px solid #cccccc10;
+    border: 1px solid var(--primary-color);
     border-radius: 5px;
-    box-shadow: 0 0 5px #00000010;
+    box-shadow: 0 0 5px var(--secondary-color);
 }
 
 input[type="text"],
@@ -159,12 +179,12 @@ input[type="email"] {
 
 input:hover,
 textarea:hover {
-    border-color: #2d72c2;
+    border-color: var(--third-color);
 }
 
-button {
-    background-color: #2d72c2cc;
-    color: white;
+.submit-btn {
+    background-color: var(--third-color);
+    color: var(--primary-color);
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 5px;
